@@ -144,7 +144,8 @@ class InstagramScraper(object):
 
     def _retry_prompt(self, url, exception_message):
         """Show prompt and return True: retry, False: ignore, None: abort"""
-        answer = input( 'Repeated error {0}\n(A)bort, (I)gnore, (R)etry or retry (F)orever?'.format(exception_message) )
+        #removed prompt - will always default to forever retry
+        answer = 'F'
         if answer:
             answer = answer[0].upper()
             if answer == 'I':
